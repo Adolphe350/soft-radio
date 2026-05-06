@@ -1,0 +1,121 @@
+---
+import Player from '../components/Player.astro';
+import '../styles/global.css';
+import { Headphones, Moon, Brain, Sparkles, Radio, Waves } from 'lucide-astro';
+
+const title = 'Soft Radio — Lofi Music, Relax Music & Focus Music Live';
+const description = 'Listen to Soft Radio, a modern online radio station for lofi music, relax music, focus music, chill beats, study sessions, sleep, and peaceful background listening.';
+const keywords = 'soft radio, lofi radio, lofi music, relax music, focus music, study music, chillhop radio, online radio, sleep music, calm music, background music, lofi beats live';
+const canonical = 'https://soft-radio.kimuse.rw/';
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'RadioStation',
+  name: 'Soft Radio',
+  url: canonical,
+  description,
+  genre: ['Lofi music', 'Relax music', 'Focus music', 'Study music', 'Chillhop'],
+  areaServed: 'Worldwide',
+  inLanguage: 'en',
+  sameAs: [],
+};
+---
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="keywords" content={keywords} />
+    <link rel="canonical" href={canonical} />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <meta name="theme-color" content="#090913" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content="https://soft-radio.kimuse.rw/soft-radio-og.svg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content="https://soft-radio.kimuse.rw/soft-radio-og.svg" />
+    <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+  </head>
+  <body>
+    <nav class="nav" aria-label="Main navigation">
+      <div class="container nav-inner">
+        <a class="logo" href="/" aria-label="Soft Radio home"><span class="logo-mark">♪</span><span>Soft Radio</span></a>
+        <div class="nav-links">
+          <a href="#listen">Listen</a><a href="#vibe">Vibe</a><a href="#seo">About</a>
+        </div>
+        <a class="btn" href="#listen">Play live</a>
+      </div>
+    </nav>
+
+    <main>
+      <header class="hero">
+        <div class="container hero-grid">
+          <div>
+            <span class="badge"><span class="pulse"></span> Live online radio for calm focus</span>
+            <h1><span class="gradient-text">Lofi music</span> for soft minds.</h1>
+            <p class="lead">Soft Radio streams warm lofi beats, relax music, focus music, chillhop, ambient textures, and peaceful background sound for work, study, coding, reading, sleeping, and slowing down.</p>
+            <div class="hero-actions">
+              <a class="btn primary" href="#listen"><Headphones size={19} /> Listen to Soft Radio</a>
+              <a class="btn" href="#vibe"><Sparkles size={18} /> Explore the vibe</a>
+            </div>
+            <div class="stats" aria-label="Soft Radio highlights">
+              <div class="stat"><strong>24/7</strong><span>calm streaming</span></div>
+              <div class="stat"><strong>Lofi</strong><span>beats & chillhop</span></div>
+              <div class="stat"><strong>Focus</strong><span>study and work music</span></div>
+            </div>
+          </div>
+          <Player />
+        </div>
+      </header>
+
+      <section id="vibe">
+        <div class="container">
+          <div class="section-head">
+            <span class="kicker">Why listen</span>
+            <h2 class="section-title">A beautiful radio stream made for deep calm.</h2>
+            <p class="lead">No noisy clutter. No stressful energy. Just a modern lofi radio experience designed to keep you relaxed, productive, and present.</p>
+          </div>
+          <div class="grid-3">
+            <article class="card"><div class="icon"><Brain size={24} /></div><h3>Focus music for work</h3><p>Use Soft Radio as your background soundtrack for coding, studying, designing, planning, writing, or any deep-work session.</p></article>
+            <article class="card"><div class="icon"><Moon size={24} /></div><h3>Relax music for evenings</h3><p>Unwind with soft drums, gentle melodies, mellow ambience, and calm lofi textures that help the day slow down.</p></article>
+            <article class="card"><div class="icon"><Waves size={24} /></div><h3>Peaceful background sound</h3><p>Low-distraction music for cafés, bedrooms, study rooms, creative studios, and peaceful moments anywhere in the world.</p></article>
+          </div>
+        </div>
+      </section>
+
+      <section id="seo">
+        <div class="container seo-text">
+          <div class="section-head">
+            <span class="kicker">Soft Radio</span>
+            <h2 class="section-title">Listen to lofi radio, relax music, and focus music online.</h2>
+          </div>
+          <p>Soft Radio is an online radio station for listeners searching for lofi music, relax music, focus music, study music, chill beats, sleep music, and calm background music. Whether you need a lofi radio stream for productivity, a peaceful soundtrack for reading, or relaxing music for stress relief, Soft Radio keeps the sound warm, minimal, and easy to enjoy.</p>
+          <div class="tags" aria-label="Soft Radio music categories">
+            <span class="tag">lofi radio</span><span class="tag">lofi music</span><span class="tag">relax music</span><span class="tag">focus music</span><span class="tag">study music</span><span class="tag">sleep music</span><span class="tag">chillhop</span><span class="tag">calm music</span>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="container cta">
+          <div>
+            <span class="kicker">Start listening</span>
+            <h2>Press play. Find your flow.</h2>
+          </div>
+          <a class="btn primary" href="#listen"><Radio size={19} /> Play Soft Radio live</a>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container footer-grid">
+        <div class="logo"><span class="logo-mark">♪</span><span>Soft Radio</span></div>
+        <p>© 2026 Soft Radio. Lofi music, relax music, and focus music online.</p>
+      </div>
+    </footer>
+  </body>
+</html>

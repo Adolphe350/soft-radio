@@ -1,0 +1,19 @@
+---
+const streamUrl = import.meta.env.PUBLIC_STREAM_URL || 'https://stream.zeno.fm/0r0xa792kwzuv';
+---
+<div class="player-card" id="listen" aria-label="Soft Radio live lofi music player">
+  <div class="cover" aria-hidden="true"><div class="vinyl"><span>SR</span></div></div>
+  <div class="player-meta">
+    <div>
+      <h2>Soft Radio Live</h2>
+      <p>Lofi • Relax • Focus • Sleep</p>
+    </div>
+    <div class="equalizer" aria-label="Live audio animation"><i></i><i></i><i></i><i></i><i></i></div>
+  </div>
+  <div class="audio-shell">
+    <audio controls preload="none" src={streamUrl} title="Listen to Soft Radio live lofi music stream">
+      Your browser does not support the audio element. Open the Soft Radio stream directly.
+    </audio>
+    <p class="now">Press play and settle into a calm flow: soft lofi beats, relaxing music, study music, focus music, chillhop, and peaceful background sound.</p>
+  </div>
+</div>

@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://soft-radio.kimuse.rw/sitemap-index.xml
